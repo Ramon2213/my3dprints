@@ -1,0 +1,66 @@
+body {
+  background-color: aquamarine;
+}
+
+header * { 
+  display: inline; 
+  
+
+
+}
+
+header {
+  border-radius:7px;
+  background-color:rgb(167, 204, 237);
+  padding: 1%;
+  font-family: "Segoe UI",Arial,sans-serif;
+  display:  flex;
+  justify-content: space-between;
+  font-size: 15px;
+  
+  
+}
+footer {
+  background-color:rgb(167, 204, 237);
+  justify-content: center;
+  text-align: center;
+}
+.navbar > li {
+    display: inline;
+}  
+.navbar li+li::before {
+  padding: 30px;
+  content: "";
+}
+.navbar a {
+  text-decoration: none;
+  color: rgb(157, 250, 250);
+  font-size: 20px;   
+  
+}
+.navbar a:hover {
+  color: rgb(60, 0, 255);
+}
+.item {
+    height: 300px;
+    width: 300px;
+    border-radius: 6px;
+    object-fit: cover;
+    border: 2px solid black;
+}
+.container{
+  margin-left: 3px;
+  margin-right: 3px;
+  background-color: white;
+  padding-top: 3%;
+  padding-bottom: 5%;
+  padding-left: 3%;
+  padding-right: 3%;
+  font-size: 15 px;
+  font-family: "Segoe UI",Arial,sans-serif;
+}
+
+#collectie{
+  display: flex;
+  justify-content: space-between;
+}
