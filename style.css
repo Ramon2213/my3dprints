@@ -10,7 +10,6 @@ header * {
 }
 
 header {
-  border-radius:7px;
   background-color:rgb(167, 204, 237);
   padding: 1%;
   font-family: "Segoe UI",Arial,sans-serif;
@@ -49,8 +48,6 @@ footer {
     border: 2px solid black;
 }
 .container{
-  margin-left: 3px;
-  margin-right: 3px;
   background-color: white;
   padding-top: 3%;
   padding-bottom: 5%;
