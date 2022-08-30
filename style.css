@@ -4,11 +4,10 @@ body {
 
 header * { 
   display: inline; 
-  
-
-
 }
-
+a {
+  text-decoration: none;
+}
 header {
   border-radius:7px;
   background-color:rgb(167, 204, 237);
@@ -58,9 +57,9 @@ footer {
   padding-right: 3%;
   font-size: 15 px;
   font-family: "Segoe UI",Arial,sans-serif;
+
 }
 
 #collectie{
-  display: flex;
-  justify-content: space-between;
+
 }
