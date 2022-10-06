@@ -44,6 +44,7 @@ header {
   position: relative;
   left: 5%;
   object-fit: cover; 
+  margin-right: 100px;
 }
 footer {
   background-color:rgb(167, 204, 237);
