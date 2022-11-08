@@ -1,3 +1,9 @@
+*{
+  margin:0; padding:0;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
 
 body {
   background-color: rgb(230, 230, 230);
@@ -6,6 +12,7 @@ body {
   color: black;
 }
 
+/* Header --------------------------------------------------------------------------------------------*/
 
 header * { 
   display: inline; 
@@ -22,33 +29,18 @@ header {
   border-radius:7px;
   background-color:rgb(116, 116, 116);
   min-width: 100%;
-
   font-family: "Segoe UI",Arial,sans-serif;
   font-size: 15px;
   display:  inline-flex;
-
   justify-content: space-between;
-
   align-items: CENTER;
-
-
-
-  
-
 }
-
-
 #logo{
-
   width: 200px;
   position: relative;
   left: 5%;
   object-fit: cover; 
-}
-footer {
-  background-color:rgb(167, 204, 237);
-  justify-content: center;
-  text-align: center;
+  margin-right: 100px;
 }
 .navbar > li {
     display: inline;
@@ -61,22 +53,77 @@ footer {
   text-decoration: none;
   color: rgb(255, 255, 255);
   font-size: 15px;   
-
-  
 }
-
 .navbar a:hover {
   color: rgb(163, 163, 163);
 }
-.item {
-    height: 300px;
-    width: 300px;
-    border-radius: 6px;
-    object-fit: cover;
-    border: 2px solid black;
-    margin: 3%;
+.navbutton{
+  padding: 10px;
 }
-.container{
+.navbar{
+  white-space: nowrap;
+}
+/* 3d button */ 
+.pushable {
+  background:rgb(129, 158, 184);
+  border: none;
+  border-radius: 12px;
+  padding: 0px;
+  cursor: pointer;
+}
+
+.front {
+  display: inline-block;
+  padding: 12px 42px;
+  border-radius: 12px;
+  background: rgb(167, 204, 237);
+  color: white;
+  transform: translateY(-4px);
+}
+.pushable:active .front {
+  transform: translateY(-2px);
+}
+.pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+.front {
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+.pushable:hover .front {
+  transform: translateY(-6px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+.pushable:active .front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+/*3d button einde*/ 
+
+/*shyguys*/
+#shyguy{
+  max-width: 800px;
+  max-height: 40px;
+  left: -100px;
+  position: absolute;
+  top: 30px;
+  animation: shyguymove 7s linear;
+  z-index: 3;
+}
+@keyframes shyguymove{
+  from{transform: translateX(10px);}
+  to{transform: translateX(2000px);}
+}
+/*shyguys einde*/
+/* Header einde ------------------------------------------------------------------------------------------------------------------*/
+
+/*pagina container*/
+.paginacontainer{
   margin-left: 3px;
   margin-right: 3px;
   background-color: white;
@@ -85,103 +132,91 @@ footer {
   padding-left: 3%;
   padding-right: 3%;
   font-size: 15 px;
-
   font-family: "Segoe UI",Arial,sans-serif;
+}
+/*pagina container einde*/
+
+/* collectie grid */
+#image-gallery{
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 50px 50px;
+  background: rgb(169, 200, 198);
+  border-radius: 10px;;
+  list-style-type: none;
+}
+.image-gallery > li {
+  flex-basis: 350px;
+
+}
+#image-gallery li img{
+  background-color: #000000;
+  height: 300px;
+  width: 300px;
+  border-radius: 6px;
+  object-fit: cover;
+  border: 1px solid black;
 
 }
 
-*{
-  margin:0; padding:0;
-
-  font-family: sans-serif;
-  letter-spacing: 1px;
-  font-weight: 300;
+.overlay{
+  display: flex;
+  justify-content: space-between;
 }
 
-#collectie{
-    display: flex;
-    justify-content: center;
-    width: 90%;
-    margin: 0 auto;
-}
-
-.navbutton{
-  
-
-  padding: 10px;
-
-}
-
-.navbar{
-  white-space: nowrap;
-
-
-}
-
-
-      
-
-
-/* button */ 
-
-.pushable {
-  background:rgb(129, 158, 184);
+/* add to cart button */
+.pushable2{
+  font-size:10px;
+  background: rgb(144, 14, 14);
   border: none;
   border-radius: 12px;
   padding: 0px;
   cursor: pointer;
 }
-.front {
-  display: inline-block;
-  padding: 12px 42px;
-  border-radius: 12px;
 
-  background: rgb(167, 204, 237);
+.front2{
+  display: inline-block;
+  padding: 5px 20px;
+  border-radius: 12px;
+  background: rgb(235, 26, 26);
   color: white;
   transform: translateY(-4px);
 }
-
-.pushable:active .front {
+.pushable2:active .front {
   transform: translateY(-2px);
 }
-
-.pushable:focus:not(:focus-visible) {
+.pushable2:focus:not(:focus-visible) {
   outline: none;
 }
-
-.front {
+.front2 {
   transition:
     transform
     600ms
     cubic-bezier(.3, .7, .4, 1);
 }
-
-.pushable:hover .front {
+.pushable2:hover .front2 {
   transform: translateY(-6px);
   transition:
     transform
     250ms
     cubic-bezier(.3, .7, .4, 1.5);
 }
-
-.pushable:active .front {
+.pushable2:active .front2 {
   transform: translateY(-2px);
   transition: transform 34ms;
 }
+/* add to cart button einde */
+/*collectie grid einde*/
 
-/* shyguys */
-
-#shyguy{
-    max-width: 800px;
-    max-height: 40px;
-    left: -100px;
-    position: absolute;
-    top: 30px;
-    animation: shyguymove 7s linear;
-    z-index: 3;
+/* footer---------------------------------------------------------------------------------------------------------------*/
+footer {
+  background-color:rgb(167, 204, 237);
+  justify-content: center;
+  text-align: center;
 }
+/* footer einde-----------------------------------------------------------------------------------------------------------*/
 
-@keyframes shyguymove{
-    from{transform: translateX(10px);}
-    to{transform: translateX(2000px);}
-}
